@@ -1,0 +1,36 @@
+<div class="section">
+
+  <form id="form" action="/login" method="POST">
+
+      <h1>
+      <label for="username">Username:</label>
+      <input type="text" name="username" placeholder="Elon">
+      </h1>
+    
+      <h1>
+      <label for="password">Password:</label>
+      <input type="password" name="password" placeholder="password">
+      </h1>
+
+      {{#if message}}
+        <div class="error-message">{{ message }}</div>
+      {{/if}}
+
+      <button>Sign in</button>  
+
+      <h2>
+      <p class="account-message">
+          Don't have an account? <a href="/signup">Sign me up!</a> 
+      </p>
+      </h2>
+  </form>
+
+  <div class="video-container">
+      <div class="color-overlay"></div>
+      <video autoplay loop muted>
+        <!-- good practice to add more video formats so it can be compatible for different platforms -->
+        <source src="video/starman_extra_trim.mp4" type="video/mp4">
+      </video> 
+  </div>
+
+</div>

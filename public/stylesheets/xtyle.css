@@ -1,0 +1,134 @@
+/* FOR THE ROCKETS API PAGE */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px "Lora", Helvetica, Arial, sans-serif;
+  color: white;
+  background: url("../images/space-is-essential.jpeg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #dedede;
+}
+
+button {
+  font-family: inherit;
+  font-size: 11px;
+  background: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 3px 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  color: #fff;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  margin: 50px auto 0;
+  padding: 10px;
+  border-radius: 20px;
+/*   background-color: rgba(88, 98, 123, 0.95); */
+  text-align: center;
+}
+
+.rockets-container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.active {
+  background-color: #42f471;
+}
+
+.operations {
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.operation {
+  margin: 20px 0 0;
+}
+
+.rocket-info {
+  position: relative;
+  width: 71%;
+  height: 500px;
+  margin: 10px;
+  padding: 10px;
+  text-align: left;
+  border: solid white 2px;
+  border-radius: 20px;
+}
+
+.rocket-info div span {
+  color: #dedede;
+  position: absolute;
+  left: 50%;
+}
+
+.form-container {
+  display: inline-block;
+  width: 49%;
+  margin: 30px auto 0;
+  vertical-align: top;
+}
+
+/* .character-form {
+  width: 50%;
+  margin: 0 auto;
+  text-align: left;
+  clear: both;
+} */
+
+/* .character-form label {
+  width: 100px;
+  display: inline-block;
+} */
+
+.field {
+  margin: 5px 0;
+}
+
+.submit-button {
+  margin: 10px 0 0 120px;
+}
+
+img {
+  max-width:50%;
+  max-height:50%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+/* .image-cropper {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+  .profile-pic {
+  display: inline;
+  margin: 0 auto;
+  margin-left: -25%; 
+  height: 100%;
+  width: auto;
+  } */

@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 25px "Lora", Helvetica, Arial, sans-serif;
+  color: white;
+  background: url("../images/cowboy.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #dedede;
+}

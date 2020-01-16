@@ -1,0 +1,12 @@
+<div class="section"><form action="/user/update/{{user._id}}" method="post" enctype="multipart/form-data">
+<label for="">email:</label>
+<input type="text" name="email" value="{{user.email}}">
+
+<label for="">username:</label>
+<input type="text" name="username" value="{{user.username}}">
+
+<label for="">Profile Picture</label>
+<input type="File" name="image-name-thingy" value="{{user.image}}">
+
+<button type="submit">SUBMIT</button>
+</form></div>

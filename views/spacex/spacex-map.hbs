@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/stylesheets/map.css"/>
+  <title>Launch Map</title>
+  <style>
+    #map {
+      height: 400px;
+      width: 40%;
+    }
+
+    #mapholder {
+      height: 40px;
+      width: 40%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>SpaceX Launch Locations</h1>
+  <div id="map"></div>
+
+  <p>Click the button to get your coordinates.</p>
+
+  <button onclick="getLocation()">Try It</button>
+
+  <p id="demo"></p>
+
+
+
+  <script>
+    function initMap() {
+      // Map options
+      var options = {
+        // MAP ZOOM
+        zoom: 3,
+        center: { lat: 37.0902, lng: -95.7129 }
+      }
+
+      // New map
+      var map = new google.maps.Map(document.getElementById('map'), options);
+
+      //   // Listen for click on map
+      //   google.maps.event.addListener(map, 'click', function(event){
+      //     // Add marker
+      //     addMarker({coords:event.latLng});
+      //   });
+
+      /*
+      // Add marker
+      var marker = new google.maps.Marker({
+        position:{lat:42.4668,lng:-70.9495},
+        map:map,
+        icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+      });
+
+      var infoWindow = new google.maps.InfoWindow({
+        content:'<h1>Lynn MA</h1>'
+      });
+
+      marker.addListener('click', function(){
+        infoWindow.open(map, marker);
+      });
+      */
+
+      // Array of markers
+      var markers = [
+        {
+          coords: { lat: 28.5620, lng: -80.5772 },
+          content: '<h1>Cape Canaveral Air Force Station Space Launch Complex 40</h1>'
+        },
+        {
+          coords: { lat: 28.6050, lng: -80.6026 },
+          content: `<h1>Kennedy Space Center's Historic Launch Complex 39A</h1>`
+        },
+        {
+          coords: { lat: 34.6320, lng: -120.6107 },
+          content: '<h1>Vandenberg Air Force Base Space Launch Complex 4E</h1>'
+        }
+      ];
+
+      // Loop through markers
+      for (var i = 0; i < markers.length; i++) {
+        // Add marker
+        addMarker(markers[i]);
+      }
+
+      // Add Marker Function
+      function addMarker(props) {
+        var marker = new google.maps.Marker({
+          position: props.coords,
+          map: map,
+          //icon:props.iconImage
+        });
+
+        // Check for customicon
+        if (props.iconImage) {
+          // Set icon image
+          marker.setIcon(props.iconImage);
+        }
+
+        // Check content
+        if (props.content) {
+          var infoWindow = new google.maps.InfoWindow({
+            content: props.content
+          });
+
+          marker.addListener('click', function () {
+            infoWindow.open(map, marker);
+          });
+        }
+      }
+    }
+
+
+
+
+    var x = document.getElementById("demo");
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+
+
+    }
+
+
+  </script>
+
+
+
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpSvDOh348a9j1pHEPNy1mfp28r0eQEeA&callback=initMap"async defer></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <title>User Profile</title>
+</head>
+
+<body>
+
+
+
+  {{#if currentUser}}
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="countdown-container">
+      <div class="missionName"></div>
+      <div class="row">
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="stuff">
+
+    <div class="card" style="width: 20rem;">
+      <img src="{{currentUser.image}}" class="card-img-top" alt="profile_pic">
+      <div class="card-body">
+        <h5 class="card-title-profile">Explorer:</h5>
+        <h3 class="card-text-profile"> {{currentUser.username}}</h3>
+      </div>
+    </div>
+
+
+
+
+  </div>
+  </div>
+
+
+
+
+
+  {{/if}}
+
+  <div class="recent-missions">
+    <h1>RECENT MISSIONS:</h1>
+  </div>
+
+
+  <div class="lastMissions">
+
+    <div class="missionName"></div>
+  </div>
+
+  <script type="text/javascript" src="/javascripts/countdown.js"></script>
+  <script type="text/javascript" src="/javascripts/latestLaunches.js"></script>
+
+
+</body>
+
+</html

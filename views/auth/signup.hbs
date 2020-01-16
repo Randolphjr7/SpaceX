@@ -1,0 +1,48 @@
+
+<div class="section">
+
+  <form id="form" action="/signup" method="POST" id="form-container" enctype="multipart/form-data">
+
+    <h1>
+    <label for="username">Username</label><br>
+    <input id="username" type="text" name="username" placeholder="Spaceman">
+    </h1>
+
+    <h1>
+    <label for="password">Password</label><br>
+    <input id="password" type="password" name="password" placeholder="Your password">
+    </h1>
+
+    
+    <label for="img">Profile Picture</label>
+    <input type="file" name="image-name-thingy" id="img"> 
+    
+
+    <h1>
+    <label for="email">Email</label><br>
+    <input type="text" name="email"
+    placeholder="spaceman@gmail.com">
+    </h1>
+
+    {{#if message}}
+    <div class="error-message">{{ message }}</div>
+    {{/if}}
+    <br><br>
+
+    <button>Create Account</button>
+
+    <p class="account-message">
+      Do you already have an account?
+      <a href="/login">Login</a>
+    </p>
+  </form>
+
+  <div class="video-container">
+      <div class="color-overlay"></div>
+      <video autoplay loop muted>
+        <!-- good practice to add more video formats so it can be compatible for different platforms -->
+        <source src="video/starman_extra_trim.mp4" type="video/mp4">
+      </video> 
+  </div>
+
+</div>
